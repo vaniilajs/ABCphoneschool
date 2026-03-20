@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.ref_name }}
           token: ${{ secrets.GH_TOKEN }}
 
       - name: 📝 Git User Setup
@@ -40,6 +41,6 @@ jobs:
       - name: 📦 Setup Node + PNPM + install deps
         uses: ./.github/actions/setup-node-pnpm-install
 
-      - name: 🏃‍♂️ Run App release
+      - name: 🏃‍♂️ Run App release bump
         run: |
           pnpm app-release ${{ github.event.inputs.release-type }}

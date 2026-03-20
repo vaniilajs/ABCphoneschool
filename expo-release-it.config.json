@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/expo-release-it/expo-release-it.schema.json",
+  "bump": {
+    "increment": "patch",
+    "git": {
+      "commit": false,
+      "tag": false,
+      "push": false
+    }
+  },
+  "build": {
+    "androidBuildOutput": "aab",
+    "iosPodInstall": true
+  },
+  "upload": {
+    "androidBuildOutput": "aab",
+    "uploadMetadata": false,
+    "uploadScreenshot": false
+  },
+  "submit": {
+    "uploadMetadata": true,
+    "uploadScreenshot": true
+  }
+}

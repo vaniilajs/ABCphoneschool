@@ -1,0 +1,13 @@
+{
+  "ios_app_identifier": "com.refugee-literacy-project",
+  "ios_developer_team_id": "TEAMID1234",
+  "ios_match_git_url": "https://github.com/your-org/ios-certificates.git",
+  "ios_match_password": "your-match-passphrase",
+  "ios_app_store_connect_api_key_id": "XXXXXXXXXX",
+  "ios_app_store_connect_api_key_issuer_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "ios_xcode_project_target": "refugeeliteracyprojectapp",
+  "android_package_name": "com.refugee_literacy_project",
+  "android_keystore_store_password": "your-keystore-password",
+  "android_keystore_key_alias": "refugee-literacy-project",
+  "android_keystore_key_password": "your-key-password"
+}

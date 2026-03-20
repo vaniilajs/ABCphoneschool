@@ -45,3 +45,16 @@ doodle
 
 expo-env.d.ts
 # @end expo-cli
+
+# Expo Release It
+expo-release-it/.temp
+expo-release-it/output
+expo-release-it/keyholder.json
+android/vendor/bundle
+ios/vendor/bundle
+!expo-release-it/metadata/*
+expo-release-it/key/*.p8
+expo-release-it/key/*.keystore
+expo-release-it/key/*.json
+!expo-release-it/key/*.example
+!expo-release-it/key/README.md
