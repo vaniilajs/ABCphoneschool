@@ -2,6 +2,10 @@ import type { ConfigContext, ExpoConfig } from "@expo/config";
 
 import { ClientEnv, Env } from "./env";
 
+// Required by expo-release-it for version management.
+const VERSION_NAME = "1.0.1";
+const VERSION_CODE = 1000001;
+
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: Env.NAME,
@@ -10,7 +14,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   owner: Env.EXPO_ACCOUNT_OWNER,
   scheme: Env.SCHEME,
   slug: "refugee-literacy-project-app",
-  version: Env.VERSION.toString(),
+  version: VERSION_NAME,
   orientation: "portrait",
   icon: "./assets/images/icon.png",
   userInterfaceStyle: "automatic",
@@ -26,6 +30,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ios: {
     supportsTablet: true,
     bundleIdentifier: Env.BUNDLE_ID,
+    buildNumber: String(VERSION_CODE),
     infoPlist: {
       ITSAppUsesNonExemptEncryption: false,
     },
@@ -39,6 +44,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: "#2E3C4B",
     },
     package: Env.PACKAGE,
+    versionCode: VERSION_CODE,
     edgeToEdgeEnabled: true,
   },
   web: {
@@ -63,7 +69,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
             color: "white",
           },
           {
-            text: Env.VERSION.toString(),
+            text: VERSION_NAME,
             type: "ribbon",
             color: "white",
           },
